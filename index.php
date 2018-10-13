@@ -24,7 +24,7 @@
 		<div class="pages-nav__item"><a class="link link--page" href="#page-manuals">About</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-software">News</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-custom">Service</a></div>
-		<div class="pages-nav__item"><a class="link link--page" href="#page-training">Training</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-contacts">Contacts</a></div>
 <!-- 		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-buy">Where to buy</a></div> -->
 <!-- 		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-blog">Blog &amp; News</a></div> -->
 <!-- 		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-contact">Contact</a></div> -->
@@ -48,12 +48,12 @@
 //                         echo "This is PHP code";
 //                         include 'fileRead.php';
 //                         ?>
-				<p class="bp-header__desc">CARE ABOUT CHILDREN'S EARLY CHILDHOOD EDUCATION <a href="https://dribbble.com/shots/2286042-Stacked-navigation"></a></p>
+<!-- 				<p class="bp-header__desc">Welcom! <a href="https://dribbble.com/shots/2286042-Stacked-navigation"></a></p> -->
 				<nav class="bp-nav">
-<!-- 					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous page"><span>Previous Blueprint</span></a> -->
+					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous page"><span>Previous Blueprint</span></a>
 					<!--a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-<!-- 					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the news"><span>back to the Codrops article</span></a> -->
-<!-- 					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="email us"><span>Go to the archive</span></a> -->
+					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the news"><span>back to the Codrops article</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="email us"><span>Go to the archive</span></a>
 				</nav>
 			</header>
 			<img class="poster" src="images/1.4.jpg" alt="img01" />
@@ -100,20 +100,23 @@
 			</header>
 			<img class="poster" src="images/4.jpg" alt="img04" />
 		</div>
-		<div class="page" id="page-training">
+		<div class="page" id="page-contacts">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Training &amp; Learning Center</h1>
 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
 				<p class="info">
-					"The moment I began to understand what was going on with the treatment of animals, it led me more and more in the way of the path I am [on] now, which is a complete vegan." &mdash; Bryan Adams
+					<?php 
+					   include 'contacts.php';
+					?>
 				</p>
 			</header>
 			<img class="poster" src="images/5.jpg" alt="img05" />
 		</div>
 		<div class="page" id="page-buy">
 			<header class="bp-header cf">
-				<h1 class="bp-header__title">Where to buy</h1>
-				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
+				<h1 class="bp-header__title">Customer support and self-service</h1>
+				<p class="bp-header__desc">Find a range of popular customer self-service options as well as helpful contact information.</p>
+				
 				<p class="info">
 					"When people ask me why I don't eat meat or any other animal products, I say, 'Because they are unhealthy and they are the product of a violent and inhumane industry.'" &mdash;
 				</p>
