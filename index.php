@@ -48,12 +48,12 @@
 //                         echo "This is PHP code";
 //                         include 'fileRead.php';
 //                         ?>
-<!-- 				<p class="bp-header__desc">Welcom! <a href="https://dribbble.com/shots/2286042-Stacked-navigation"></a></p> -->
+				<p class="bp-header__desc">CARE ABOUT CHILDREN'S EARLY CHILDHOOD EDUCATION <a href="https://dribbble.com/shots/2286042-Stacked-navigation"></a></p>
 				<nav class="bp-nav">
-					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous page"><span>Previous Blueprint</span></a>
+<!-- 					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous page"><span>Previous Blueprint</span></a> -->
 					<!--a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the news"><span>back to the Codrops article</span></a>
-					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="email us"><span>Go to the archive</span></a>
+<!-- 					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the news"><span>back to the Codrops article</span></a> -->
+<!-- 					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="email us"><span>Go to the archive</span></a> -->
 				</nav>
 			</header>
 			<img class="poster" src="images/1.4.jpg" alt="img01" />
