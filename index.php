@@ -24,7 +24,7 @@
 		<div class="pages-nav__item"><a class="link link--page" href="#page-manuals">About</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-software">News</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-custom">Service</a></div>
-		<div class="pages-nav__item"><a class="link link--page" href="#page-training">Training</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-contacts">Contacts</a></div>
 <!-- 		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-buy">Where to buy</a></div> -->
 <!-- 		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-blog">Blog &amp; News</a></div> -->
 <!-- 		<div class="pages-nav__item pages-nav__item--small"><a class="link link--page link--faded" href="#page-contact">Contact</a></div> -->
@@ -100,20 +100,23 @@
 			</header>
 			<img class="poster" src="images/4.jpg" alt="img04" />
 		</div>
-		<div class="page" id="page-training">
+		<div class="page" id="page-contacts">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Training &amp; Learning Center</h1>
 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
 				<p class="info">
-					"The moment I began to understand what was going on with the treatment of animals, it led me more and more in the way of the path I am [on] now, which is a complete vegan." &mdash; Bryan Adams
+					<?php 
+					   include 'contacts.php';
+					?>
 				</p>
 			</header>
 			<img class="poster" src="images/5.jpg" alt="img05" />
 		</div>
 		<div class="page" id="page-buy">
 			<header class="bp-header cf">
-				<h1 class="bp-header__title">Where to buy</h1>
-				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
+				<h1 class="bp-header__title">Customer support and self-service</h1>
+				<p class="bp-header__desc">Find a range of popular customer self-service options as well as helpful contact information.</p>
+				
 				<p class="info">
 					"When people ask me why I don't eat meat or any other animal products, I say, 'Because they are unhealthy and they are the product of a violent and inhumane industry.'" &mdash;
 				</p>
