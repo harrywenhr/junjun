@@ -42,7 +42,7 @@
 		<div class="page" id="page-home">
 			<!-- Blueprint header -->
 			<header class="bp-header cf">
-				<span class="bp-header__present">Home <span class="bp-tooltip bp-icon bp-icon--about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+				<span class="bp-header__present">Home <span class="bp-tooltip bp-icon bp-icon--about" data-content="home"></span></span>
 				<h1 class="bp-header__title">Smart Company</h1>
 				<?php
 //                         echo "This is PHP code";
@@ -102,8 +102,8 @@
 		</div>
 		<div class="page" id="page-contacts">
 			<header class="bp-header cf">
-				<h1 class="bp-header__title">Training &amp; Learning Center</h1>
-				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p>
+				<h1 class="bp-header__title">Contacts</h1>
+<!-- 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p> -->
 				<p class="info">
 					<?php 
 					   include 'contacts.php';
