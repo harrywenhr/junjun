@@ -7,5 +7,5 @@ foreach ($arrayOfContents as $word) {
     echo $word;
     echo "\r\n";
 }
-fclose($myfile);
+fclose($myfileContents);
 ?>
