@@ -14,6 +14,25 @@
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr-custom.js"></script>
+	<script>
+	var request;
+	function linkClick($clickName) {
+		if (request) {
+	        request.abort();
+	    }
+	    
+		request = $.ajax({
+			  type: "POST",
+			  url: "cookies.php",
+			  data: {"name":$clickName }
+			})
+		
+		request.done(function(response, textStatus, jqXHR) {
+			  alert( "Data Saved");
+			});    
+			    
+		}
+	</script>
 </head>
 
 <body>
@@ -22,7 +41,7 @@
 		<div class="pages-nav__item"><a class="link link--page" href="#page-home">Home</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-about">About</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-news">News</a></div>
-		<div class="pages-nav__item"><a class="link link--page" href="#page-service">Service</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-service">Products/Services</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-contacts">Contacts</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-admin">admin</a></div>
 	</nav>
@@ -35,13 +54,7 @@
 			<header class="bp-header cf">
 				<span class="bp-header__present">Home <span class="bp-tooltip bp-icon bp-icon--about" data-content="home"></span></span>
 				<h1 class="bp-header__title">Smart Company</h1>
-				<p class="bp-header__desc">CARE ABOUT CHILDREN'S EARLY CHILDHOOD EDUCATION <a href="https://dribbble.com/shots/2286042-Stacked-navigation"></a></p>
-<!-- 				<nav class="bp-nav"> -->
-<!-- 					<a class="bp-nav__item bp-icon bp-icon--prev" href="http://tympanus.net/Blueprints/ZoomSlider/" data-info="previous page"><span>Previous Blueprint</span></a>  -->
-<!-- 					<a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a> -->
-<!--  					<a class="bp-nav__item bp-icon bp-icon--drop" href="http://tympanus.net/codrops/?p=25311" data-info="back to the news"><span>back to the Codrops article</span></a>  -->
-<!-- 					<a class="bp-nav__item bp-icon bp-icon--archive" href="http://tympanus.net/codrops/category/blueprints/" data-info="email us"><span>Go to the archive</span></a>  -->
-<!-- 				</nav> -->
+				<p class="bp-header__desc">CARE ABOUT CHILDREN'S EARLY CHILDHOOD EDUCATION </p>
 			</header>
 			<img class="poster" src="images/1.4.jpg" alt="img01" />
 		</div>
@@ -72,13 +85,31 @@
 		
 		<div class="page" id="page-service">
 			<header class="bp-header cf">
-				<h1 class="bp-header__title">Service</h1>
-<!-- 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p> -->
+				<h1 class="bp-header__title">Products/Services</h1>
+				<p class="bp-header__desc"></p>
+<!-- 				<form action = "cookie.php" method = "post"> -->
 				<p class="info">
-					The services menu and online appointment system is coming soon!
+					<strong>Parenthood</strong><br>
+					<a target="_blank" href="/complete-curriculums.php" onclick="linkClick('Curriculum|/complete-curriculums.php')" >Curriculum</a><br>
+					<a target="_blank" href="/online-courses.php" onclick="linkClick('Online Courses|/online-courses.php')">Online Courses</a><br>
+					<a target="_blank" href="/books-dvd.php" onclick="linkClick('Education Resourses|/books-dvd.php')">Education Resourses</a><br>
+					<a target="_blank" href="/independent-educators.php" onclick="linkClick('Independent Educators and Health Professionals|/independent-educators.php')">Independent Educators and Health Professionals</a><br>
+					<br><strong>Early Childhood</strong><br>
+					<a target="_blank" href="/Understanding-Mother-Baby-Care.php" onclick="linkClick('Understanding Mother and Baby Care|/Understanding-Mother-Baby-Care.php')">Understanding Mother and Baby Care</a><br>
+					<a target="_blank" href="/cognitive-and-behavioural-capacities.php" onclick="linkClick('Cognitive and Behavioural Capacities|/cognitive-and-behavioural-capacities.php')">Cognitive and Behavioural Capacities</a><br>
+					<a target="_blank" href="/mental-healthy.php" onclick="linkClick('Mental Healthy|/mental-healthy.php')">Mental Healthy</a><br>
+					<a target="_blank" href="/motor-development.php" onclick="linkClick('Motor Development|/motor-development.php')">Motor Development</a><br>
+					<a target="_blank" href="/Develop-language-abilities.php" onclick="linkClick('Language Abilities Development|/Develop-language-abilities.php')">Language Abilities Development</a><br>
+					<a target="_blank" href="/concentration-and-attention.php" onclick="linkClick('Concentration and Attention Training|/concentration-and-attention.php')">Concentration and Attention Training</a><br>
+
 				</p>
+				<br><br>You may also want to see:<br>
+				<p class="bp-header__desc"><a target="_blank" href="PreviouslyVisited.php">Previously Visited</a> <strong> / </strong>
+				<a target="_blank" href="MostFrequentlyVisited.php">Most Frequently Visited</a></p>
+<!-- 				</form> -->
 			</header>
-			<img class="poster" src="images/4.jpg" alt="img04" />
+			
+			<img class="poster" src="images/service1.jpg" alt="img04" />
 		</div>
 		
 		<div class="page" id="page-contacts">
