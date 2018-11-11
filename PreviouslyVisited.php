@@ -29,12 +29,15 @@
 		$sortedCookieContent = sortCookieCount($cookie);
 		
 		//print_r($sortedCookieContent);
-		
-		    $href = $sortedCookieContent[0]['value']['href'];
-		    $name = $sortedCookieContent[0]['name'];
-		    $time = $sortedCookieContent[0]['value']['lastClicked'];
+		for ($i = 0; $i < count($sortedCookieContent); $i++){
+		    $href = $sortedCookieContent[$i]['value']['href'];
+		    $name = $sortedCookieContent[$i]['name'];
+		    $time = $sortedCookieContent[$i]['value']['lastClicked'];
 		    echo "<tr><td><a target='_blank' href='$href'>$name</a></td><td>$time</td></tr>";
-
+		    if ($i == 4) {
+		        break;
+		    }
+		}
 		
 		
         ?>
