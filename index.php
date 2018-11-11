@@ -106,12 +106,12 @@
 					<a target="_blank" href="/books-dvd.php" onclick="linkClick(event)">Education Resourses</a><br>
 					<a target="_blank" href="/independent-educators.php" onclick="linkClick(event)">Independent Educators and Health Professionals</a><br>
 					<br><strong>Early Childhood</strong><br>
-					<a target="_blank" href="/Understanding-Mother-Baby-Care.php" onclick="linkClick('Understanding Mother and Baby Care|/Understanding-Mother-Baby-Care.php')">Understanding Mother and Baby Care</a><br>
-					<a target="_blank" href="/cognitive-and-behavioural-capacities.php" onclick="linkClick('Cognitive and Behavioural Capacities|/cognitive-and-behavioural-capacities.php')">Cognitive and Behavioural Capacities</a><br>
-					<a target="_blank" href="/mental-healthy.php" onclick="linkClick('Mental Healthy|/mental-healthy.php')">Mental Healthy</a><br>
-					<a target="_blank" href="/motor-development.php" onclick="linkClick('Motor Development|/motor-development.php')">Motor Development</a><br>
-					<a target="_blank" href="/Develop-language-abilities.php" onclick="linkClick('Language Abilities Development|/Develop-language-abilities.php')">Language Abilities Development</a><br>
-					<a target="_blank" href="/concentration-and-attention.php" onclick="linkClick('Concentration and Attention Training|/concentration-and-attention.php')">Concentration and Attention Training</a><br>
+					<a target="_blank" href="/Understanding-Mother-Baby-Care.php" onclick="linkClick(event)">Understanding Mother and Baby Care</a><br>
+					<a target="_blank" href="/cognitive-and-behavioural-capacities.php" onclick="linkClick(event)">Cognitive and Behavioural Capacities</a><br>
+					<a target="_blank" href="/mental-healthy.php" onclick="linkClick(event)">Mental Healthy</a><br>
+					<a target="_blank" href="/motor-development.php" onclick="linkClick(event)">Motor Development</a><br>
+					<a target="_blank" href="/Develop-language-abilities.php" onclick="linkClick(event)">Language Abilities Development</a><br>
+					<a target="_blank" href="/concentration-and-attention.php" onclick="linkClick(event)">Concentration and Attention Training</a><br>
 
 				</p>
 				<br><br>You may also want to see:<br>

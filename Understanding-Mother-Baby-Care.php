@@ -24,9 +24,8 @@
 <p class="info">
 	<strong>Course Description:</strong><br><br>
 	When it's time to bring home baby, new parents have lots of questions. 
-	Send them home with answers—and ensure they receive complete and essential information 
-	no matter which format they choose! When you provide families with an Understanding Mother 
-	Baby Care course, you’ll also provide access to a free book with companion web app that works on 
+	Send them home with answers—and ensure they receive complete and essential information! When you provide 
+	families with an Understanding Mother and Baby Care course, you’ll also provide a free book with access to a companion web app that works on 
 	any type of mobile device or computer which includes helpful videos and practical tools, 
 	including a breastfeeding and diaper log and digital postnatal depression scale. It’s the perfect discharge education solution, 
 	 and both the book and app are customizable!
