@@ -21,20 +21,22 @@
 	<h1 class="bp-header__title"> Most Frequently Visited </h1><br>
 	<table style = "weight: 123px; height: 180px;font-size: 13pt;border = '5' ">
 		<?php 
-		foreach($_COOKIE as $keyOfCookie => $cookieData){
-		    $clickTimes = array($cookieData[count]=>$keyOfCookie);
-		}
-		krsort($clickTimes);
+		include ('helpFunctions.php');
+		$sortedCookieContent = NULL;
+		$cookie = json_decode($_COOKIE['cookie'], true);
 		
-		if(count($clickTimes)<5){
-		    $showLinkNum = count($clickTimes);
-		}else{
-		    $showLinkNum = 5;
-		}
 		
-		for ($i = 0; $i < $showLinkNum; $i++){
-		    $page = explode("|", $clickTimes[$i]);
-		    echo "<tr><td><a target='_blank' href='$page[0]'>$page[1]</a></td></tr>";
+		$sortedCookieContent = sortCookie($cookie);
+		
+		//print_r($sortedCookieContent);
+		
+		for ($i = 0; $i < count($sortedCookieContent); $i++){
+		    $href = $sortedCookieContent[$i]['value']['href'];
+		    $name = $sortedCookieContent[$i]['name'];
+		    echo "<tr><td><a target='_blank' href='$href'>$name</a></td></tr>";
+		    if ($i == 4) {
+		        break;
+		    }
 		}
 		
         ?>

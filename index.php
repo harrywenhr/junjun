@@ -14,9 +14,16 @@
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr-custom.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
+
+
 	var request;
-	function linkClick($clickName) {
+	function linkClick(event) {
+		productName = event.target.innerText
+		href = event.target.href
+		//alert(productName)
+		
 		if (request) {
 	        request.abort();
 	    }
@@ -24,11 +31,11 @@
 		request = $.ajax({
 			  type: "POST",
 			  url: "cookies.php",
-			  data: {"name":$clickName }
+			  data: {"name": productName, "href": href}
 			})
 		
 		request.done(function(response, textStatus, jqXHR) {
-			  alert( "Data Saved");
+			  //alert( "Data Saved");
 			});    
 			    
 		}
@@ -90,10 +97,10 @@
 <!-- 				<form action = "cookie.php" method = "post"> -->
 				<p class="info">
 					<strong>Parenthood</strong><br>
-					<a target="_blank" href="/complete-curriculums.php" onclick="linkClick('Curriculum|/complete-curriculums.php')" >Curriculum</a><br>
-					<a target="_blank" href="/online-courses.php" onclick="linkClick('Online Courses|/online-courses.php')">Online Courses</a><br>
-					<a target="_blank" href="/books-dvd.php" onclick="linkClick('Education Resourses|/books-dvd.php')">Education Resourses</a><br>
-					<a target="_blank" href="/independent-educators.php" onclick="linkClick('Independent Educators and Health Professionals|/independent-educators.php')">Independent Educators and Health Professionals</a><br>
+					<a target="_blank" href="/complete-curriculums.php" onclick="linkClick(event)" >Curriculum</a><br>
+					<a target="_blank" href="/online-courses.php" onclick="linkClick(event)">Online Courses</a><br>
+					<a target="_blank" href="/books-dvd.php" onclick="linkClick(event)">Education Resourses</a><br>
+					<a target="_blank" href="/independent-educators.php" onclick="linkClick(event)">Independent Educators and Health Professionals</a><br>
 					<br><strong>Early Childhood</strong><br>
 					<a target="_blank" href="/Understanding-Mother-Baby-Care.php" onclick="linkClick('Understanding Mother and Baby Care|/Understanding-Mother-Baby-Care.php')">Understanding Mother and Baby Care</a><br>
 					<a target="_blank" href="/cognitive-and-behavioural-capacities.php" onclick="linkClick('Cognitive and Behavioural Capacities|/cognitive-and-behavioural-capacities.php')">Cognitive and Behavioural Capacities</a><br>
