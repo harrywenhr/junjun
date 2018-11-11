@@ -21,21 +21,21 @@
 	<h1 class="bp-header__title"> Most Recently Visited </h1><br>
 	<table style = "weight: 123px; height: 180px;font-size: 13pt;border = '5' ">
 		<?php 
-		foreach($_COOKIE as $keyOfCookie => $cookieData){
-		    $vistTime = array($cookieData[time]=>$keyOfCookie);
-		}
-		krsort($vistTime);
+		include ('helpFunctions.php');
+		$sortedCookieContent = NULL;
+		$cookie = json_decode($_COOKIE['cookie'], true);
 		
-		if(count($vistTime)<5){
-		    $showLinkNum = count($vistTime);
-		}else{
-		    $showLinkNum = 5;
-		}
-		    
-		for ($i = 0; $i <$showLinkNum; $i++){
-		    $page = explode("|", $vistTime[$i]);
-		    echo "<tr><td><a target='_blank' href='$page[0]'> $page[1]</a></td></tr>";
-		}
+		
+		$sortedCookieContent = sortCookieCount($cookie);
+		
+		//print_r($sortedCookieContent);
+		
+		    $href = $sortedCookieContent[0]['value']['href'];
+		    $name = $sortedCookieContent[0]['name'];
+		    $time = $sortedCookieContent[0]['value']['lastClicked'];
+		    echo "<tr><td><a target='_blank' href='$href'>$name</a></td><td>$time</td></tr>";
+
+		
 		
         ?>
 	</table>
