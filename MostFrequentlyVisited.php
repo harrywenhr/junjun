@@ -26,7 +26,7 @@
 		$cookie = json_decode($_COOKIE['cookie'], true);
 		
 		
-		$sortedCookieContent = sortCookie($cookie);
+		$sortedCookieContent = sortCookieCount($cookie);
 		
 		//print_r($sortedCookieContent);
 		
