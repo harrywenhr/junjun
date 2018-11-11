@@ -17,7 +17,9 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script>
 
-
+	function deleteCookie(name) {
+		  document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+		}
 	var request;
 	function linkClick(event) {
 		productName = event.target.innerText
@@ -97,6 +99,8 @@
 <!-- 				<form action = "cookie.php" method = "post"> -->
 				<p class="info">
 					<strong>Parenthood</strong><br>
+					<button onclick="deleteCookie('cookie')">Delete Cookie</button>
+					<br/>
 					<a target="_blank" href="/complete-curriculums.php" onclick="linkClick(event)" >Curriculum</a><br>
 					<a target="_blank" href="/online-courses.php" onclick="linkClick(event)">Online Courses</a><br>
 					<a target="_blank" href="/books-dvd.php" onclick="linkClick(event)">Education Resourses</a><br>
