@@ -25,10 +25,10 @@ resources help you stay current with research and curriculum advances.</p><br>
 
 <p class="info">
 	<strong>PROFESSIONALS AND BUSINESSES WE SERVE:</strong><br><br>
-	<span style = "color: green">Independent Educators/Health Practitioners<br></span>
-	<span style = "color: green">Retail/Education Companies<br></span>
-	<span style = "color: green">Doulas<br></span>
-	<span style = "color: green">CNM/OB Practices<br></span>		
+	<span style = "color: green">+ Independent Educators/Health Practitioners<br></span>
+	<span style = "color: green">+ Retail/Education Companies<br></span>
+	<span style = "color: green">+ Doulas<br></span>
+	<span style = "color: green">+ CNM/OB Practices<br></span>		
 
 </p>
 

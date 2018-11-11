@@ -22,7 +22,14 @@
 <p class="bp-header__desc"></p>
 
 <p class="info">
-
+	<strong>Course Description:</strong><br><br>
+	Concentration is essential for performing children’s best.<br> 
+	This course will provide your child:<br> <br>
+	<span style = "color: pink">+ Learn strategies to attain optimal arousal for performance.<br> </span>
+	<span style = "color: pink">+ Learn to use positive thoughts.<br> </span>
+	<span style = "color: pink">+ Learn how to best focus attention in particular scenarios.<br> </span>
+	<span style = "color: pink">+ Use associated cue words to trigger concentration.<br> </span>
+	<span style = "color: pink">+ Develop rituals or protocols to trigger concentration.<br> </span>
 
 </p>
 
@@ -34,7 +41,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/attention.jpg" alt="img-attention"height="350" width="550" />
 
 </body>
 

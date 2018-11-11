@@ -107,7 +107,7 @@
 					<a target="_blank" href="/independent-educators.php" onclick="linkClick(event)">Independent Educators and Health Professionals</a><br>
 					<br><strong>Early Childhood</strong><br>
 					<a target="_blank" href="/Understanding-Mother-Baby-Care.php" onclick="linkClick(event)">Understanding Mother and Baby Care</a><br>
-					<a target="_blank" href="/cognitive-and-behavioural-capacities.php" onclick="linkClick(event)">Cognitive and Behavioural Capacities</a><br>
+					<a target="_blank" href="/cognitive-and-behavior-capacities.php" onclick="linkClick(event)">Cognitive and Behavior Capacities</a><br>
 					<a target="_blank" href="/mental-healthy.php" onclick="linkClick(event)">Mental Healthy</a><br>
 					<a target="_blank" href="/motor-development.php" onclick="linkClick(event)">Motor Development</a><br>
 					<a target="_blank" href="/Develop-language-abilities.php" onclick="linkClick(event)">Language Abilities Development</a><br>

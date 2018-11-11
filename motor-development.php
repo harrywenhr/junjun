@@ -22,8 +22,10 @@
 <p class="bp-header__desc"></p>
 
 <p class="info">
-
-
+	<strong>Course Description:</strong><br><br>
+	Motor development refers to the development of a child's bones, muscles and ability 
+	to move around and manipulate his or her environment. Motor development 
+	can be divided into two sections: gross motor development and fine motor development.
 </p>
 
 <br>
@@ -34,7 +36,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/motorDevelopment.jpg" alt="img-motorDevelopment" height="400" width="550"/>
 
 </body>
 

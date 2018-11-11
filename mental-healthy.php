@@ -22,7 +22,11 @@
 <p class="bp-header__desc"></p>
 
 <p class="info">
-
+	<strong>Course Description:</strong><br><br>
+	Children's mental health is without a doubt the most important aspect of any child's social 
+	and cognitive development. Children need to have a good mental health status if they are going to live up to 
+	their full potential and truly live a life that is filled with positive 
+	experiences and the willingness to do what is best for themselves and the people around them.
 
 </p>
 
@@ -34,7 +38,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/mentalHealthy.jpg" alt="img-mentalHealthy" height="400" width="550"/>
 
 </body>
 

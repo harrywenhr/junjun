@@ -29,8 +29,6 @@
 	any type of mobile device or computer which includes helpful videos and practical tools, 
 	including a breastfeeding and diaper log and digital postnatal depression scale. It’s the perfect discharge education solution, 
 	 and both the book and app are customizable!
-
-
 </p>
 
 <br>

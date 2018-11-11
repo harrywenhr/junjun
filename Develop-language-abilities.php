@@ -22,8 +22,12 @@
 <p class="bp-header__desc"></p>
 
 <p class="info">
-
-
+	<strong>Course Description:</strong><br><br>
+	If you want to know the best way to start recognizing signs of your child developing language 
+	early on, there are some things to watch for you as your child grows older (even if they are 
+	over the age of six). Since it usually happens naturally, you may not even 
+	notice or recognize the ways language is formed in your child over time. Our course will help you 
+	to recognize these things whihc will be more helpful during your child's language abilities development.
 </p>
 
 <br>
@@ -34,7 +38,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/language.jpg" alt="img-language" height="400" width="570"/>
 
 </body>
 
