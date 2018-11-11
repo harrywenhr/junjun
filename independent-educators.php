@@ -18,13 +18,17 @@
 <body>
 		
 <header class="bp-header cf">
-<h1 class="bp-header__title"> Independent Educators and Health Professionals </h1><br>
+<h1 class="bp-header__title"> Independent Educators and Health Professionals </h1>
 <p class="bp-header__desc">Evidence-based, relevant, and vetted by childbirth educators from across the country, 
 our products can be customized and branded for your business and your clientele. Plus, our webinars and educator 
-resources help you stay current with research and curriculum advances.</p>
+resources help you stay current with research and curriculum advances.</p><br>
 
 <p class="info">
-					
+	<strong>PROFESSIONALS AND BUSINESSES WE SERVE:</strong><br><br>
+	<span style = "color: green">Independent Educators/Health Practitioners<br></span>
+	<span style = "color: green">Retail/Education Companies<br></span>
+	<span style = "color: green">Doulas<br></span>
+	<span style = "color: green">CNM/OB Practices<br></span>		
 
 </p>
 
@@ -36,7 +40,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/Educators.jpeg" alt="img-Educators" height="400" width="550"/>
 
 </body>
 

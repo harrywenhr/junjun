@@ -18,8 +18,8 @@
 <body>
 		
 <header class="bp-header cf">
-<h1 class="bp-header__title"> Parenthood — consistent education at every stage </h1><br>
-<p class="bp-header__desc"></p>
+<h1 class="bp-header__title"> Parenthood </h1>
+<p class="bp-header__desc">Consistent education at every stage.</p><br>
 
 <p class="info">
 Each piece of the curriculum is designed to save you time, 
@@ -35,7 +35,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/parenthood.jpg" alt="img-parenthood" height="350" width="550"/>
 
 </body>
 

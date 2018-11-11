@@ -18,11 +18,15 @@
 <body>
 		
 <header class="bp-header cf">
-<h1 class="bp-header__title"> Education Resourses - Books and DVDs</h1><br>
-<p class="bp-header__desc"></p>
+<h1 class="bp-header__title"> Education Resourses</h1>
+<p class="bp-header__desc">Variety, choice, and visually-engaging materials for the way you learn.</p><br>
 
 <p class="info">
-
+To meet the needs of all parents in a variety of environments, our products come in a variety 
+of formats – including DVDs, PowerPoint presentations, video-enhanced printed materials, 
+online eClasses, web apps, and digital delivery for patient-education systems and mobile devices. 
+This allows you to optimize the format chosen for different occasion use, 
+reaching all types of learners in different settings.
 
 </p>
 
@@ -34,7 +38,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/books.jpeg" alt="img-books" height="400" width="550" />
 
 </body>
 

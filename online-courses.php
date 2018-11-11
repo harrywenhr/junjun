@@ -18,11 +18,12 @@
 <body>
 		
 <header class="bp-header cf">
-<h1 class="bp-header__title"> Online Courses </h1><br>
-<p class="bp-header__desc"></p>
+<h1 class="bp-header__title"> Online Courses </h1>
+<p class="bp-header__desc">Effective, engaging online learning for parents.</p><br>
 
 <p class="info">
-
+eCourses allow you to provide an online resource of evidence-based and 
+trusted information—all with tracking reports that help you keep tabs on learners’ progress.
 
 </p>
 
@@ -34,7 +35,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/service1.jpg" alt="img04" />
+<img class="poster" src="images/onlineCourses.jpeg" alt="img-onlineCourses" height="400" width="550"/>
 
 </body>
 
