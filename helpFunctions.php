@@ -1,4 +1,21 @@
 <?php
+
+
+define("DBHOST","127.0.0.1");
+define("DBDATA","SmartCompany");
+define("DBUSER","root");
+define("DBPASS","password");
+
+function mysqlQueryWithLogging($link, $query) {
+    $result = mysqli_query($link, $query);
+    if (!$result) {
+        echo_error("db link " . mysqli_errno($link) . " error : " . mysqli_error($link) . " " . $query ." ", " We having trouble execute sql");
+        //echo_error("Error description: " . mysqli_errno($result));
+    }
+    return $result;
+}
+
+
 function echo_error($error, $description = NULL) {
     error_log("Descriptions : " .$description . " " . print_r($error, TRUE));
 }
