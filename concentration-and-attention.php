@@ -41,7 +41,7 @@ data-info="home"> <span>home</span></a>
 
 </header>
 
-<img class="poster" src="images/attention.jpg" alt="img-attention"height="350" width="550" />
+<img class="poster" src="images/attention.jpg" alt="img-attention" height="350" width="550" />
 
 </body>
 

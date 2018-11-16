@@ -52,7 +52,10 @@
 		<div class="pages-nav__item"><a class="link link--page" href="#page-news">News</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-service">Products/Services</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-contacts">Contacts</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-userList">userList</a></div>
 		<div class="pages-nav__item"><a class="link link--page" href="#page-admin">admin</a></div>
+		<div class="pages-nav__item"><a class="link link--page" href="#page-userSearch">Search For Users</a></div>
+		<div class="pages-nav__item"><a target="_blank" href="userCreation">Sign Up</a></div>
 	</nav>
 	<!-- /navigation-->
 	
@@ -65,20 +68,19 @@
 				<h1 class="bp-header__title">Smart Company</h1>
 				<p class="bp-header__desc">CARE ABOUT CHILDREN'S EARLY CHILDHOOD EDUCATION </p>
 			</header>
-			<img class="poster" src="images/1.4.jpg" alt="img01" />
+			<img class="poster" src="images/home.jpg" alt="img-home" />
 		</div>
 		<!-- /page -->
 		
 		<div class="page" id="page-about">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">THE JOURNEY WITH CHILDREN BEGINS Here</h1>
-<!-- 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p> -->
 				<p class="info">
 					Smart Company provides service about early childhood education for preschool children in 0-6 years old.
 					This website will provide up-to-date knowledge and information in this field.
 				</p>
 			</header>
-			<img class="poster" src="images/10.jpg" alt="img02" />
+			<img class="poster" src="images/about.jpg" alt="img-about" />
 		</div>
 		
 		<div class="page" id="page-news">
@@ -89,14 +91,13 @@
 					Children are born angels, adult education into “human” them. &mdash; Al Gore
 				</p>
 			</header>
-			<img class="poster" src="images/9.jpg" alt="img03" />
+			<img class="poster" src="images/news.jpg" alt="img-news" />
 		</div>
 		
 		<div class="page" id="page-service">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Products/Services</h1>
 				<p class="bp-header__desc"></p>
-<!-- 				<form action = "cookie.php" method = "post"> -->
 				<p class="info">
 					<strong>Parenthood</strong><br/>
 <!--					<button onclick="deleteCookie('cookie')">Delete Cookie</button>
@@ -117,7 +118,6 @@
 				<br><br>You may also want to see:<br>
 				<p class="bp-header__desc"><a target="_blank" href="PreviouslyVisited.php">Previously Visited</a> <strong> / </strong>
 				<a target="_blank" href="MostFrequentlyVisited.php">Most Frequently Visited</a></p>
-<!-- 				</form> -->
 			</header>
 			
 			<img class="poster" src="images/service1.jpg" alt="img04" />
@@ -126,14 +126,25 @@
 		<div class="page" id="page-contacts">
 			<header class="bp-header cf">
 				<h1 class="bp-header__title">Contacts</h1>
-<!-- 				<p class="bp-header__desc">Based on Ilya Kostin's Dribbble shot <a href="https://dribbble.com/shots/2286042-Stacked-navigation">Stacked navigation</a></p> -->
 				<p class="info">
 					<?php 
 					   include 'contacts.php';
 					?>
 				</p>
 			</header>
-			<img class="poster" src="images/5.jpg" alt="img05" />
+			<img class="poster" src="images/contact.jpg" alt="img-contact" />
+		</div>
+		
+		<div class="page" id="page-userList">
+					<?php 
+					   include 'user_list.php';
+					?>			
+		</div>
+		
+		<div class="page" id="page-userSearch">
+					<?php 
+					   include 'userSearch.php';
+					?>			
 		</div>
 		
 		<div class="page" id="page-admin">
@@ -141,18 +152,18 @@
 				<h1 class="bp-header__title">Admin Login</h1>
 				<p class="info">Please enter username and password:</p>
 				
-				<form action = "login.php" method = "post"><br>
+				<form action = "login.php" method = "post" ><br>
  					<table style = "weight: 123px; height: 180px;font-size: 13pt">
 						<tr><td><strong>Username:</strong></td></tr>						
  						<tr> 
  							<td ><input size = "35" name = "USERNAME"  
- 							style = "weight: 115px; height: 25px"/></td>
+ 							style = "weight: 115px; height: 25px" required></td>
  						</tr> 
 						
 						<tr><td><strong>Password:</strong></td></tr> 
  						<tr> 
 							<td><input size = "35" name = "PASSWORD" type = "password" 
- 							style = "weight: 115px; height: 25px"/><br/></td>
+ 							style = "weight: 115px; height: 25px" required><br/></td>
  						</tr> 
 						
  						<tr> 

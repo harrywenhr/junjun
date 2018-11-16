@@ -9,7 +9,6 @@
 	<meta name="keywords" content="Smart Company, early childhood, education, appointment" />
 	<meta name="author" content="Yijun" />
 	<link rel="shortcut icon" href="title.ico">
-	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr-custom.js"></script>
@@ -21,12 +20,6 @@
 
 <?php 
     extract($_POST);
-    
-    // check if both password & username have been entered
-    if (!$USERNAME || !$PASSWORD){
-        fieldsBlank();
-        die();
-    }
     
     // check if button was clicked
     if (isset($Enter)){
@@ -66,15 +59,6 @@
             accessDenied();
     }
     
-    function fieldsBlank(){
-        echo "<title>Acess Denied</title>
-              <body style = \"font-family:arial; font-size: 20px; 
-                color: red\"><strong>Please fill in all form fields!</strong><br/><br/>";
-       //back button to main page
-       echo '<nav class="bp-nav">
-        <a class="bp-nav__item bp-icon bp-icon--prev" href= "javascript:history.go(-1);"
-        data-info="Back"> <span>Back</span></a></nav> '; 
-    }
     
     function checkPassword($adminpassword, $filedata){
         if($adminpassword == $filedata[1]){
