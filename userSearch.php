@@ -12,32 +12,87 @@
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
 	<script src="js/modernizr-custom.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+
+	function updateSearchResult(results) {
+		console.log(results);
+		html = "<table style='width:100%'>";
+		html += "<tr><th>userName</th><th>Email</th><th>phoneNumber</th></tr>"
+		for (var i = 0; i < results.length; i++) {
+			data = results[i];
+			html += "<tr>";
+			html += "<td>" + data['userName'] + "</td>";
+			html += "<td>" + data['email'] + "</td>";
+			html += "<td>" + data['homePhone'] + "</td>";
+			html += "</tr>";
+		}
+		html += "</table>";
+		console.log(html);
+		$('#searchResults').empty();
+		$('#searchResults').append(html);
+	}
+	var request;
+	$(function() {
+	    // Get the form.
+	    var form = $('#search_form');
+
+	 // Set up an event listener for the contact form.
+	    $(form).submit(function(event) {
+	        // Stop the browser from submitting the form.
+	        event.preventDefault();
+	        var formData = $(form).serialize();
+			if (request) {
+		        request.abort();
+		    }
+		    
+			request = $.ajax({
+				  type: "POST",
+				  url: "searchUsers.php",
+				  data: formData
+				})
+			
+			request.done(function(response, textStatus, jqXHR) {
+				  try {
+					    searchResults = JSON.parse(response);
+					    updateSearchResult(searchResults);
+					 } catch (err)
+					 {
+						 alert(response);
+					 }
+				});    
+				    
+			
+	    });
+	});
+	</script>
 </head>
 
 <body>
 	<header class="bp-header cf">
 		<h1 class="bp-header__title" style="color:DarkGoldenRod; padding: 20px 350px">------ User Search ------</h1><br>
 		<div class="search">
-			<form action="userSearch.php" style ="padding: 20px 400px">
+			<form id = "search_form" style ="padding: 20px 400px" method="post">
 			<table style = "weight: 123px; height: 180px;font-size: 13pt">
 			
       		<tr><td><label for="searchName"><strong>Name: &nbsp&nbsp</strong></label></td><td>
       		<input style="height:30px; width:200px" type="text" 
-      		placeholder="Search by names.." name="searchName"></td></tr>
+      		placeholder="Search by user names.." name="userName"></td></tr>
      		
      		<tr><td><label for="searchEmail"><strong>Email: &nbsp&nbsp</strong></label></td><td>
      		<input style="height:30px; width:200px" type="text" 
-     		placeholder="Search by email.." name="searchEmail"></td></tr>
+     		placeholder="Search by email.." name="Email" ></td></tr>
      		
      		<tr><td><label for="searchPhoneNum"><strong>Phone#: &nbsp&nbsp</strong></label></td><td>
      		<input style="height:30px; width:200px" type="text" 
-     		placeholder="Search by phone numbers.." name="searchPhoneNum"></td></tr>
+     		placeholder="Search by phone numbers.." name="homePhoneNum"></td></tr>
      		
      		<tr><td></td><td><button style="height:30px; width:100px" type="submit">Search</button></td></tr>
      		</table>
    			</form>
   		</div>
-  			
+  		<div id = "searchResults"></div>
 
 <!-- 		<nav class="bp-nav"> -->
 <!-- 		<a class="bp-nav__item bp-icon bp-icon--prev" href= "javascript:history.go(-1);"  -->

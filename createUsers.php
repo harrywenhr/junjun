@@ -1,16 +1,17 @@
 <?php
-echo "creating users";
 include ('helpFunctions.php');
 $link = mysqli_connect(DBHOST, DBUSER, DBPASS, DBDATA);
 
+echo_error($_POST);
 $tableName = "Users";
 
-$lastName = "last123";
-$firstName = "first";
-$email = "email111@gmail.com";
-$homeAddress = "home";
-$homePhone = "homePhone";
-$cellPhone = "cellPhone";
+$lastName = $_POST['lastName'];
+$firstName = $_POST['firstName'];
+$email = $_POST['Email'];
+$homeAddress = $_POST['homeAddress'];
+$homePhone = $_POST['homePhoneNum'];
+$cellPhone = $_POST['cellPhoneNum'];
+$userName = $_POST['userName'];
 
 
 $fields = array(
@@ -19,7 +20,8 @@ $fields = array(
     'email',
     'homeAddress',
     'homePhone',
-    'cellPhone'
+    'cellPhone',
+    'userName'
 );
 $values = array(
     "'".$lastName."'",
@@ -27,7 +29,8 @@ $values = array(
     "'".$email."'",
     "'".$homeAddress."'",
     "'".$homePhone."'",
-    "'".$cellPhone."'"
+    "'".$cellPhone."'",
+    "'".$userName."'"
 );
 $updates = array(
     "lastName = '".$lastName."'",
@@ -36,13 +39,30 @@ $updates = array(
     "homeAddress = '".$email."'",
     "cellPhone = '".$homeAddress."'",
     "homePhone = '".$homePhone."'",
-    "cellPhone = '".$cellPhone."'"
+    "cellPhone = '".$cellPhone."'",
+    "userName = '".$userName."'"
 );
+
+
+$result = mysqli_query($link, "SELECT * FROM Users WHERE userName = '".$userName."'");
+if (mysqli_num_rows($result) > 0){
+    echo "Username ".$userName." already existed";
+    return;
+}
+
+$result = mysqli_query($link, "SELECT * FROM Users WHERE email = '".$email."'");
+if (mysqli_num_rows($result) > 0){
+    echo "email ".$email." already existed";
+    return;
+}
+
+
 $fieldsClause = implode( ', ', $fields );
 $valuesClause = implode( ', ', $values );
 $updatesClause = implode( ', ', $updates);
-$query = "INSERT INTO Users(%s) VALUES (%s) ON DUPLICATE KEY UPDATE %s";
-$query = sprintf( $query, $fieldsClause, $valuesClause, $updatesClause);
+$query = "INSERT INTO Users(%s) VALUES (%s) ON DUPLICATE KEY UPDATE email = email";
+$query = sprintf( $query, $fieldsClause, $valuesClause);
+echo_error($query, "inserting");
 mysqlQueryWithLogging($link, $query);
-
+echo "Succefully created user ".$userName;
 ?>

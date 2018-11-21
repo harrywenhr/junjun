@@ -11,7 +11,39 @@
 	<link rel="shortcut icon" href="title.ico">
 	<link rel="stylesheet" type="text/css" href="css/demo.css" />
 	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css" />
 	<script src="js/modernizr-custom.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+
+	var request;
+	$(function() {
+	    // Get the form.
+	    var form = $('#sign_up');
+
+	 // Set up an event listener for the contact form.
+	    $(form).submit(function(event) {
+	        // Stop the browser from submitting the form.
+	        event.preventDefault();
+	        var formData = $(form).serialize();
+			if (request) {
+		        request.abort();
+		    }
+		    
+			request = $.ajax({
+				  type: "POST",
+				  url: "createUsers.php",
+				  data: formData
+				})
+			
+			request.done(function(response, textStatus, jqXHR) {
+				   alert( response);
+				});    
+				    
+			
+	    });
+	});
+	</script>
 </head>
 
 <body>
@@ -23,23 +55,23 @@
 		
 		<tr><td><label for="username">User name</label></td></tr>
 		<tr><td><input style="height:30px; width:200px" type="text" 
-      	placeholder="Enter user name" name="userName" required></td></tr>
+      	placeholder="Enter user name" name="userName" required ></td></tr>
       	
       	<tr><td><label for="firstName">First name</label></td></tr>	
       	<tr><td><input style="height:30px; width:200px" type="text" 
-      	placeholder="Enter your first name" name="firstName" required></td></tr>
+      	placeholder="Enter your first name" name="firstName"  required></td></tr>
       	
       	<tr><td><label for="lastName">Last name</label></td></tr>	
       	<tr><td><input style="height:30px; width:200px" type="text" 
-      	placeholder="Enter your last name" name="lastName" required></td></tr>
+      	placeholder="Enter your last name" name="lastName" required ></td></tr>
      	
      	<tr><td><label for="Email">Email</label></td></tr>	
      	<tr><td><input style="height:30px; width:200px" type="text" 
-     	placeholder="Enter email address" name="Email" required></td></tr>
+     	placeholder="Enter email address" name="Email"  required></td></tr>
      	
      	<tr><td><label for="homeAddress">Home address</label></td></tr>
      	<tr><td><input style="height:30px; width:200px" type="text" 
-     	placeholder="Enter home address" name="homeAddress" required></td></tr>
+     	placeholder="Enter home address" name="homeAddress" ></td></tr>
      	
      	<tr><td><label for="homePhoneNum">Home phone Number</label></td></tr>
      	<tr><td><input style="height:30px; width:200px" type="text" 
