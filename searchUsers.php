@@ -20,7 +20,7 @@ if (isset($userName)){
     echo_error($query, "searching");
     $result = mysqlQueryWithLogging($link, $query);
     $myArray = array();
-    if ($result) {
+    if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
             $myArray[] = $row;
         }
@@ -40,7 +40,7 @@ if (isset($email)){
     echo_error($query, "searching");
     $result = mysqlQueryWithLogging($link, $query);
     $myArray = array();
-    if ($result) {
+    if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
             $myArray[] = $row;
         }
@@ -59,8 +59,9 @@ if (isset($email)){
     $query = "SELECT * FROM " .$tableName. " WHERE homePhone = '" .$homePhone. "'";
     echo_error($query, "searching");
     $result = mysqlQueryWithLogging($link, $query);
+    
     $myArray = array();
-    if ($result) {
+    if (mysqli_num_rows($result) > 0) {
         while($row = mysqli_fetch_array($result)) {
             $myArray[] = $row;
         }
