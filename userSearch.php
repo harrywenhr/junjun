@@ -19,13 +19,17 @@
 	function updateSearchResult(results) {
 		console.log(results);
 		html = "<table style='width:100%'>";
-		html += "<tr><th>userName</th><th>Email</th><th>phoneNumber</th></tr>"
+		html += "<tr><td><strong>User Name</strong></td><td><strong>First Name</strong></td><td><strong>Last Name</strong></td><td><strong>Email</strong></td><td><strong>Address</strong></td><td><strong>Home Phone Number</strong></td><td><strong>cell Phone Number</strong></td></tr>"
 		for (var i = 0; i < results.length; i++) {
 			data = results[i];
 			html += "<tr>";
 			html += "<td>" + data['userName'] + "</td>";
+			html += "<td>" + data['firstName'] + "</td>";
+			html += "<td>" + data['lastName'] + "</td>";
 			html += "<td>" + data['email'] + "</td>";
+			html += "<td>" + data['homeAddress'] + "</td>";
 			html += "<td>" + data['homePhone'] + "</td>";
+			html += "<td>" + data['cellPhone'] + "</td>";
 			html += "</tr>";
 		}
 		html += "</table>";
@@ -71,7 +75,7 @@
 
 <body>
 	<header class="bp-header cf">
-		<h1 class="bp-header__title" style="color:DarkGoldenRod; padding: 20px 350px">------ User Search ------</h1><br>
+		<h1 class="bp-header__title" style="color:DarkGoldenRod; padding: 20px 350px">---- User Search ----</h1><br>
 		<div class="search">
 			<form id = "search_form" style ="padding: 20px 400px" method="post">
 			<table style = "weight: 123px; height: 180px;font-size: 13pt">

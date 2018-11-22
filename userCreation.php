@@ -86,7 +86,7 @@
    		</form>
   			
 		<nav class="bp-nav">
-		<a class="bp-nav__item bp-icon bp-icon--prev" href= "javascript:history.go(-1);" 
+		<a class="bp-nav__item bp-icon bp-icon--prev" href= "/" 
 			data-info="Back"> <span >Back</span></a>	
 		</nav> 
 
