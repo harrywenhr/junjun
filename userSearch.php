@@ -38,6 +38,34 @@
 		$('#searchResults').append(html);
 	}
 	var request;
+
+	function searchUserInfo() {
+		$('#searchResults').empty();
+		if (request) {
+	        request.abort();
+	    }
+		selectedOption = document.getElementById("searchSelect")
+		optionValue = selectedOption.options[selectedOption.selectedIndex].value;
+		searchValue = document.getElementById("searchPlaceHolder").value;
+	    searchData = {"searchType":optionValue, "searchToken": searchValue};
+		request = $.ajax({
+			  type: "POST",
+			  url: "searchUsers.php",
+			  data: searchData
+			})
+		
+		request.done(function(response, textStatus, jqXHR) {
+			  try {
+				    searchResults = JSON.parse(response);
+				    updateSearchResult(searchResults);
+				 } catch (err)
+				 {
+					 alert(response);
+				 }
+			});  
+	}
+
+	
 	$(function() {
 	    // Get the form.
 	    var form = $('#search_form');
@@ -70,6 +98,11 @@
 			
 	    });
 	});
+
+	function searchOption(value) {
+		console.log(value);
+		document.getElementById("searchPlaceHolder").setAttribute( "placeholder",  value);
+		}
 	</script>
 </head>
 
@@ -77,24 +110,14 @@
 	<header class="bp-header cf">
 		<h1 class="bp-header__title" style="color:DarkGoldenRod; padding: 20px 350px">---- User Search ----</h1><br>
 		<div class="search">
-			<form id = "search_form" style ="padding: 20px 400px" method="post">
-			<table style = "weight: 123px; height: 180px;font-size: 13pt">
-			
-      		<tr><td><label for="searchName"><strong>Name: &nbsp&nbsp</strong></label></td><td>
-      		<input style="height:30px; width:200px" type="text" 
-      		placeholder="Search by user names.." name="userName"></td></tr>
-     		
-     		<tr><td><label for="searchEmail"><strong>Email: &nbsp&nbsp</strong></label></td><td>
-     		<input style="height:30px; width:200px" type="text" 
-     		placeholder="Search by email.." name="Email" ></td></tr>
-     		
-     		<tr><td><label for="searchPhoneNum"><strong>Phone#: &nbsp&nbsp</strong></label></td><td>
-     		<input style="height:30px; width:200px" type="text" 
-     		placeholder="Search by phone numbers.." name="homePhoneNum"></td></tr>
-     		
-     		<tr><td></td><td><button style="height:30px; width:100px" type="submit">Search</button></td></tr>
-     		</table>
-   			</form>
+			<select id="searchSelect" onchange="searchOption(this.value)">
+              <option value="searchByUserName">searchByUserName</option>
+              <option value="searchByEmail">searchByEmail</option>
+              <option value="searchByPhone">searchByPhone</option>
+            </select>
+		     <input id="searchPlaceHolder" style="height:30px; width:200px" type="text" 
+      		placeholder="searchByUserName">
+		    <button style="height:30px; width:100px" onclick="searchUserInfo()">Search</button>
   		</div>
   		<div id = "searchResults"></div>
 
